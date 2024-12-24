@@ -12,13 +12,14 @@ body {
 
 .holder {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 100px; /* Explicit row size */
+    grid-template-columns: 100px 100px; /* Explicit column size */
     width: 200px;
     height: 200px;
-    gap: 10px; /* Optional: Add space between grid items */
+    gap: 0; /* Ensure no spacing affects the grid dimensions */
     background-color: #ffffff;
     border: 1px solid #ddd;
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height */
 }
 
 .item {
@@ -30,4 +31,5 @@ body {
     font-size: 18px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    box-sizing: border-box; /* Ensures consistent sizing */
 }
